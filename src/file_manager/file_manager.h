@@ -8,7 +8,16 @@
 #ifndef FILE_MANEGER_H
 #define FILE_MANEGER_H
 
-int a[3] = {0,1,2};
-int add(int a, int b);
+#include <stdio.h> 
+#include <time.h> 
+#include <math.h> 
+#include <stdlib.h>
+#include "def.h"
+#include "bp.h"
+
+void readData();
+void writeNeuron_2();
+
+
 
 #endif
