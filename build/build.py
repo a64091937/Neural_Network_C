@@ -12,7 +12,9 @@ import subprocess
 root_Path = os.path.join(os.getcwd(), "..")
 Path = [   #所有的需要编译的文件列表
     'src',
-    #'src\\func',
+    'src\\file_manager',
+    'src\\bp',
+    'src\\include',
 ]
 file_Paths = []               #每个文件的绝对路径
 object_file = 'output\\main'  #输出路径
