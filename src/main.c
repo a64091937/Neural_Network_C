@@ -1,3 +1,9 @@
+/*	
+ Copyright ? 2019-2019, Zhang Hongda, a64091937. All Rights Reserved.
+ Description:A BP Neurial Network Based on C Project
+ Author:Zhang Hongda
+ Creation time:2019-7-28
+ */
 //一个完整的 C 语言的 BP 神经网络代码，可以直接在 VC++上运行。
 //双隐层，用于生成训练权值，训练好之后权值用于计算结果
 #include <stdio.h> 
