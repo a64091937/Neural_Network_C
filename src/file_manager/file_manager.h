@@ -17,7 +17,7 @@
 
 void readData();
 void writeNeuron_2();
-
+void readData_func(BP_In_Data_File_Struct BP_In_File_Size);
 
 
 #endif

@@ -7,7 +7,8 @@
 #include <stdio.h>
 #include "bp.h"
 
-
+BP_NN_Input_Struct BP_In_Str = {25000,35000,60000,39,41,80,80,20,0.01,0.01};
+double d_alltest[Data][40]={0};
 double d_all[allData][40];	//从dd[Data][40]分别得到输出和输出
 double d_allgai[allData];
 double d_paixu[allData];

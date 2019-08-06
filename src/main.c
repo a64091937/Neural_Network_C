@@ -20,7 +20,12 @@ int	main(int argc, char const *argv[])
 	FILE *fpe,*fpf,*fpg,*fpa;
 	double e1,e2,sum=0;
 	int i,j,k=0,kk=0;//k是用来计误差的个数的
-
+    BP_In_Data_File_Struct BP_In_File = {25000,35000,60000,40,"60000.txt"};
+    
+    
+    
+    
+    printf("%s\n",BP_In_File.scDataFile);
     printf("%d",sizeof(long));
     printf("int8u%d",sizeof(INT8U));
     printf("int8s%d",sizeof(INT8S));
@@ -30,7 +35,9 @@ int	main(int argc, char const *argv[])
     printf("int32s%d",sizeof(INT32S));
     printf("\nint64u%d",sizeof(INT64U));
     printf("\nfl32_%d",sizeof(FL32S));
-    printf("\nfile_%d",sizeof(FILE));    
+    printf("\n Data_In_%0.2f",((float)1/100));
+    //printf("\n Data_In_%d",BP_In_Str.Data_In);
+    readData_func(BP_In_File);
 	readData();	//读取样本数据
 
 	initBPNework();	//初始化神经元网络

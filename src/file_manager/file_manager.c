@@ -7,6 +7,33 @@
 #include "file_manager.h"
 
 
+void readData_func(BP_In_Data_File_Struct BP_In_File_Size)
+{
+    FILE *fp_file; 
+	INT32U i,j;
+	FL64S temp;
+
+    FL64S *uwAllDataTemp;
+    uwAllDataTemp = calloc(BP_In_File_Size.ulAllData*BP_In_File_Size.uwDataLen,sizeof(FL64S));
+
+	if((fp_file=fopen(BP_In_File_Size.scDataFile,"r"))==NULL){	//读取inout.txt，不可以就弹出错误警告
+		printf("can not read the  inout file\n"); 
+		exit(0);
+	}
+    //uwAllDataTemp[40*3+5]=12;
+   // printf("\n%lf\n",uwAllDataTemp[40*3+5]);
+    //scanf("%d",&outi);
+	for(i=0;i<BP_In_File_Size.ulAllData;i++){
+		for(j=0; j<BP_In_File_Size.uwDataLen; j++){
+			fscanf(fp_file,"%lf",&uwAllDataTemp[BP_In_File_Size.uwDataLen*i+j]);    //将读取到的数据先存储于dd[i][j]数组中
+		}
+	}	
+	fclose(fp_file); 
+    for(j=0; j<BP_In_File_Size.uwDataLen; j++){
+        printf("%lf ",uwAllDataTemp[j]);    //将读取到的数据先存储于dd[i][j]数组中
+    }    
+}
+
 //读取数据
 void readData()
 {
